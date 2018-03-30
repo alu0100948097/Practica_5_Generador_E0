@@ -22,6 +22,13 @@ class E0
         @bits_salida=b.to_i
     end
     
+    def inicio
+        @i_p=@primer.length-1
+        @i_s=@segundo.length-1
+        @i_t=@tercer.length-1
+        @i_c=@cuarto.length-1
+    end
+    
     def XOR(a,b)
         temp=a.unpack('C*').zip(b.unpack('C*'))
         temp=temp.map {|x,y| x^y}.join
