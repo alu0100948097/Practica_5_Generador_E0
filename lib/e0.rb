@@ -59,3 +59,97 @@ class E0
     end
     
 end
+
+@test=E0.new
+
+    puts
+    puts "PRÁCTICA: GENERADOR E0 DE BLUETOOTH"
+    puts
+    print "Introduzca la semilla del primer registro (25 bits): "
+    primer=gets.chomp
+    while primer.empty? || primer.length!=25
+        system "clear"
+        if primer.empty?
+            puts "No se ha introducido semilla".red
+        else
+            puts "El tamaño de la semilla introducida es incorrecta".red
+        end
+        puts
+        print "Introduzca la semilla del primer registro (25 bits): "
+        primer=gets.chomp
+    end
+    @test.primer=primer
+    print "Introduzca la semilla del segundo registro (31 bits): "
+    segundo=gets.chomp
+    while segundo.empty? || segundo.length!=31
+        system "clear"
+        if segundo.empty?
+            puts "No se ha introducido semilla".red
+            else
+            puts "El tamaño de la semilla introducida es incorrecta".red
+        end
+        puts
+        print "Introduzca la semilla del segundo registro (31 bits): "
+        segundo=gets.chomp
+    end
+    @test.segundo=segundo
+    print "Introduzca la semilla del tercer registro (33 bits): "
+    tercer=gets.chomp
+    while tercer.empty? || tercer.length!=33
+        system "clear"
+        if tercer.empty?
+            puts "No se ha introducido semilla".red
+            else
+            puts "El tamaño de la semilla introducida es incorrecta".red
+        end
+        puts
+        print "Introduzca la semilla del tercer registro (33 bits): "
+        tercer=gets.chomp
+    end
+    @test.tercer=tercer
+    print "Introduzca la semilla del cuarto registro (39 bits): "
+    cuarto=gets.chomp
+    while cuarto.empty? || cuarto.length!=39
+        system "clear"
+        if cuarto.empty?
+            puts "No se ha introducido semilla".red
+            else
+            puts "El tamaño de la semilla introducida es incorrecta".red
+        end
+        puts
+        print "Introduzca la semilla del cuarto registro (39 bits): "
+        cuarto=gets.chomp
+    end
+    @test.cuarto=cuarto
+    print "Introduzca la semilla de r1 (2 bits): "
+    r1=gets.chomp
+    while r1.empty? || r1.length!=2
+        system "clear"
+        if r1.empty?
+            puts "No se ha introducido semilla".red
+            else
+            puts "El tamaño de la semilla introducida es incorrecta".red
+        end
+        puts
+        print "Introduzca la semilla de r1 (2 bits): "
+        r1=gets.chomp
+    end
+    @test.r1=r1
+    print "Introduzca el número de bits de salida: "
+    bits_salida=gets.chomp
+    while bits_salida.empty? || bits_salida.length<=0
+        system "clear"
+        if bits_salida.empty?
+            puts "No se ha introducido número de bits de salida".red
+            else
+            puts "El número de bits de salida introducido es 0 o negativo".red
+        end
+        puts
+        print "Introduzca el número de bits de salida: "
+        bits_salida=gets.chomp
+    end
+    puts
+    @test.bits_salida=bits_salida
+    @test.inicio
+    @test.operacion
+    puts
