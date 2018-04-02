@@ -44,10 +44,6 @@ class E0
             t2[1]=XOR(r2[0],r2[1])
             suma_1=XOR(suma,t2)
             @r1=XOR(suma_1,@r1)
-            @i_p-=1
-            @i_s-=1
-            @i_t-=1
-            @i_c-=1
         end
         puts "Salida: #{@salida}"
     end
