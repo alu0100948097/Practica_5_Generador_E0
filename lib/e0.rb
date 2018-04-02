@@ -29,6 +29,13 @@ class E0
         @i_c=@cuarto.length-1
     end
     
+    def realimentacion
+        @primer=XOR(XOR("1",XOR(@primer[7],@primer[11])),XOR(@primer[19],@primer[24]))+@primer.chop
+        @segundo=XOR(XOR("1",XOR(@segundo[11],@segundo[15])),XOR(@segundo[23],@segundo[30]))+@segundo.chop
+        @tercer=XOR(XOR("1",XOR(@tercer[3],@tercer[23])),XOR(@tercer[27],@tercer[32]))+@tercer.chop
+        @cuarto=XOR(XOR("1",XOR(@cuarto[3],@cuarto[27])),XOR(@cuarto[35],@cuarto[38]))+@cuarto.chop
+    end
+    
     def operacion
         for i in 0..(@bits_salida-1)
             suma=@primer[@i_p].to_i(2)+@segundo[@i_s].to_i(2)+@tercer[@i_t].to_i(2)+@cuarto[@i_c].to_i(2)
@@ -44,6 +51,7 @@ class E0
             t2[1]=XOR(r2[0],r2[1])
             suma_1=XOR(suma,t2)
             @r1=XOR(suma_1,@r1)
+            realimentacion
         end
         puts "Salida: #{@salida}"
     end
