@@ -30,10 +30,10 @@ class E0
     end
     
     def realimentacion
-        @primer=XOR(XOR("1",XOR(@primer[7],@primer[11])),XOR(@primer[19],@primer[24]))+@primer.chop
-        @segundo=XOR(XOR("1",XOR(@segundo[11],@segundo[15])),XOR(@segundo[23],@segundo[30]))+@segundo.chop
-        @tercer=XOR(XOR("1",XOR(@tercer[3],@tercer[23])),XOR(@tercer[27],@tercer[32]))+@tercer.chop
-        @cuarto=XOR(XOR("1",XOR(@cuarto[3],@cuarto[27])),XOR(@cuarto[35],@cuarto[38]))+@cuarto.chop
+        @primer=XOR(XOR(@primer[0],XOR(@primer[7],@primer[11])),XOR(@primer[19],@primer[24]))+@primer.chop
+        @segundo=XOR(XOR(@primer[0],XOR(@segundo[11],@segundo[15])),XOR(@segundo[23],@segundo[30]))+@segundo.chop
+        @tercer=XOR(XOR(@primer[0],XOR(@tercer[3],@tercer[23])),XOR(@tercer[27],@tercer[32]))+@tercer.chop
+        @cuarto=XOR(XOR(@primer[0],XOR(@cuarto[3],@cuarto[27])),XOR(@cuarto[35],@cuarto[38]))+@cuarto.chop
     end
     
     def operacion
